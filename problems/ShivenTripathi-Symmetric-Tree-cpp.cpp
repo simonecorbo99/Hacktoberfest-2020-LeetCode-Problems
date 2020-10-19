@@ -1,3 +1,9 @@
+/**
+ * Solution to 101. Symmetric Tree at LeetCode in <language>
+ *
+ * author: ShivenTripathi
+ * ref: https://leetcode.com/problems/symmetric-tree/
+ */
 class Solution {
 public:
     bool isTrue(TreeNode* left,TreeNode* right){
