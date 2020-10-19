@@ -1,3 +1,9 @@
+/**
+ * Solution to 200. Number of Islands at LeetCode in cpp
+ *
+ * author: ShivenTripathi
+ * ref: https://leetcode.com/problems/number-of-islands/
+ */
 class Solution {
 public:
     int numIslands(vector<vector<char>>& grid) {
