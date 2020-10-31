@@ -1,0 +1,25 @@
+
+/**
+ * Solution to Find Valid Matrix Given Row and Column Sums at LeetCode in C++
+ *
+ * author: vanshulbhasker
+ * ref: https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/
+ */
+
+
+class Solution {
+public:
+    vector<vector<int>> restoreMatrix(vector<int>& r, vector<int>& c) {
+        vector<vector<int>> ret(r.size(),vector<int> (c.size()));
+        int x=0;
+        for(int i=0;i<r.size();i++){
+            for(int j=0;j<c.size();j++){
+                x=min(r[i],c[j]);
+                r[i]-=x;
+                c[j]-=x; 
+                ret[i][j]+=x;                
+            }
+        }
+        return ret;        
+    }
+};

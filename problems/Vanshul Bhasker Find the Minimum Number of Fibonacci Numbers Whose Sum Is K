@@ -1,0 +1,44 @@
+/**
+ * Solution to Find the Minimum Number of Fibonacci Numbers Whose Sum Is K at LeetCode in C++
+ *
+ * author: vanshulbhasker
+ * ref: https://leetcode.com/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/
+ */
+ 
+class Solution {
+public:
+    int findMinFibonacciNumbers(int k) {
+        
+        long long int f1 = 0, f2 = 1, i;   
+        vector<int> v;
+        for (i = 1;i<INT_MAX ; i++)  
+        {  
+            v.push_back(f2);  
+            long long int next = f1 + f2;  
+            if(next>INT_MAX){
+                break;
+            }
+            
+            f1 = f2;  
+            f2 = next;  
+        }
+        for(int x=0;x<v.size(); x++){
+            if(v[x]>k){
+                i=x-1;
+                break;
+            }
+        }
+        int c=0;
+        while(k!=0){
+            k-=v[i];
+            c++;
+            for(int x=i;x>=0;x--){
+                if(v[x]<=k){
+                    i=x;
+                    break;
+                }
+            }
+        }
+        return c;
+    }
+};
