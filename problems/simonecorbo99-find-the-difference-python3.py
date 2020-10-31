@@ -1,8 +1,8 @@
 /**
- * Solution to <problem-name> at LeetCode in <language>
+ * Solution to find-the-difference at LeetCode in Python3
  *
- * author: <username>
- * ref: <problem-source>
+ * author: simonecorbo99
+ * ref: leetcode.com/problems/find-the-difference
  */
  
  class Solution:
